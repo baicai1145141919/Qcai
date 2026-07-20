@@ -1,0 +1,21 @@
+version: 2.11.1
+apkFileName: Qcai扩展功能包_1.0.0.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+  tag: null
+sdkInfo:
+packageInfo:
+  forcedPackageId: 127
+  renameManifestPackage: null
+versionInfo:
+  versionCode: 11
+  versionName: 1.0.10
+sharedLibrary: false
+sparseResources: false
+compactEntries: false
+doNotCompress:
+- arsc
+- dex
+- assets/xposed_init

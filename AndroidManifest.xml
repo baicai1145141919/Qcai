@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="34" android:compileSdkVersionCodename="14" package="com.baicai.qqmod" platformBuildVersionCode="34" platformBuildVersionName="14">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="34"/>
+    <application android:allowBackup="true" android:hasCode="true" android:label="@string/app_name">
+        <meta-data android:name="xposedmodule" android:value="true"/>
+        <meta-data android:name="xposedminversion" android:value="82"/>
+        <meta-data android:name="xposeddescription" android:value="Qcai扩展功能包：无限戳一戳(去除冷却)、长按语音直接转发。设置界面白底圆角风格。"/>
+        <activity android:exported="true" android:label="Qcai扩展功能包" android:name="com.baicai.qqmod.SettingsActivity" android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"/>
+        <activity android:exported="true" android:icon="@drawable/contact_icon" android:label="Qcai扩展功能包" android:name="com.baicai.qqmod.ContactActivity" android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
