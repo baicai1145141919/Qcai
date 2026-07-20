@@ -1,0 +1,19 @@
+# 密钥与签名（切勿提交）
+keys/
+*.keystore
+*.jks
+
+# 构建产物
+out/
+*.apk
+*.apk.idsig
+
+# 反编译的 QQ 闭源代码（本仓库不收录）
+smali/com/tencent/
+**/com/tencent/**
+
+# 系统 / IDE
+.DS_Store
+*.log
+.idea/
+*.iml
