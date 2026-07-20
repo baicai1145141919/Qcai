@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/baicai1145141919/Qcai"><img src="https://img.shields.io/badge/GitHub-查看仓库-181717?style=for-the-badge&logo=github&logoColor=white" alt="在 GitHub 上查看"></a>
-  <a href="releases/latest"><img src="https://img.shields.io/badge/APK-下载最新版-07C160?style=for-the-badge&logo=android&logoColor=white" alt="下载最新版"></a>
+  <a href="https://github.com/baicai1145141919/Qcai/releases/download/v1.0.10/Qcai_v1.0.10.apk"><img src="https://img.shields.io/badge/APK-下载最新版-07C160?style=for-the-badge&logo=android&logoColor=white" alt="下载最新版"></a>
 </p>
 
 ---
@@ -35,7 +35,7 @@
 ## 🔗 模块如何工作
 
 - 入口 `MainHook`（实现 `IXposedHookLoadPackage`），在 `handleLoadPackage` 中按包名自判目标（`com.tencent.mobileqq` / `com.tencent.tim`）。
-- 核心功能 hook 落点来自 QAuxv 同版本反编译验证：
+- 核心功能：
   - 语音转发：菜单方法上遍历无参方法找「返回 PttElement」者并 `getFilePath()`
   - 戳一戳无限戳：`PaiYiPaiApiImpl.sendDoubleClickReq` before 清零 `this` 上所有 long 字段，原方法照常执行（保留显示）
 
