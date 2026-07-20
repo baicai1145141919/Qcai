@@ -55,27 +55,11 @@ java -jar uber-apk-signer.jar \
 
 > 注：模块以「合并进 QQ dex」的形式随 NPatch 重打包分发。本仓库只发布模块自身源码，不附带 QQ 的闭源字节码。
 
-## 📌 版本记录
-
-| 版本 | 说明 |
-| --- | --- |
-| 1.0.0 | 弹窗优化基线，备份为最终文件 |
-| 1.0.1 | 修复图标相对类名导致闪退（改全限定名） |
-| 1.0.2 | 改用系统图标 + onCreate 兜底，规范桌面图标名 |
-| 1.0.3 | 修复 `LinkMovementMethod.getInstance` NoSuchMethodError 崩溃 |
-| 1.0.4 | QQ 号改为跳转主页链接；设计「Cai 被 Q 围」图标 |
-| 1.0.5 | 跳转改为系统浏览器打开 QQ 空间主页（避免内部 scheme 闪退） |
-| 1.0.6 | QQ 号改为绿色按钮「点击此处前往作者QQ」 |
-| 1.0.7 | 跳转前 `resolveActivity` 排除腾讯系包名；GitHub 链接同样走安全策略 |
-| 1.0.8 | 彻底移除联系页 `startActivity`（QQ 进程内跳转必崩），按钮改为复制链接+Toast；GitHub 按钮样式与 QQ 按钮统一为绿底圆角 |
-| 1.0.9 | QQ 按钮复制链接由 QQ 空间改为 QQ 个人主页资料卡 deep link（`mqq://card/show_pslcard?...`）；GitHub 按钮链接更新为指定仓库 `baicai1145141919/Qcai`；Toast/提示文案校准 |
-| 1.0.10 | QQ 按钮复制链接由 `mqq://` 私有协议改为 https 网页版个人主页资料卡 `https://ti.qq.com/card/index.html?uin=2505976626`（浏览器/QQ 内可打开，不再依赖私有 scheme）；其余不变 |
-
 ## 📇 联系作者
 
-- QQ：2505976626（点击联系页「点击此处前往作者QQ」按钮，复制 QQ 个人主页链接 `https://ti.qq.com/card/index.html?uin=2505976626`，粘贴到浏览器或 QQ 即可打开）
+- QQ：2505976626
 - GitHub：[baicai1145141919/Qcai](https://github.com/baicai1145141919/Qcai)（点击「点击此处前往作者GitHub」按钮复制仓库链接）
-
+- 本模块功能极少，建议配合其他模块使用
 ## ⚠️ 免责声明
 
 本模块仅供**个人学习与技术研究**使用。使用本模块可能违反 QQ 用户协议、存在封号风险，由此产生的任何后果由使用者自行承担。请遵守所在地区法律法规。
