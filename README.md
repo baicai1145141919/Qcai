@@ -15,11 +15,8 @@
 
 | 功能 | 说明 |
 | --- | --- |
-| 🎙️ 语音自定义时长 | 发送语音时可自定义显示时长（伪装在发送端） |
 | 🔁 语音转发 | 在语音消息菜单加入转发能力 |
 | 👉 戳一戳无限戳 | 清除冷却字段，解除「戳一戳」频率限制 |
-| ⚙️ 设置页入口 | 在 QQ 设置页底部注入模块入口（RecyclerView 同级兄弟视图，不闪退） |
-| 📇 联系页（桌面图标） | 安装后桌面生成图标，点进去可查看作者联系方式；QQ / GitHub 按钮一键复制对应链接（QQ 个人主页、GitHub 仓库）到剪贴板 |
 
 ## 📱 安装方式（NPatch / LSPatch，免 Root）
 
@@ -38,11 +35,9 @@
 ## 🔗 模块如何工作
 
 - 入口 `MainHook`（实现 `IXposedHookLoadPackage`），在 `handleLoadPackage` 中按包名自判目标（`com.tencent.mobileqq` / `com.tencent.tim`）。
-- 三个核心功能 hook 落点来自 QAuxv 同版本反编译验证：
-  - 语音自定义时长：`QQRecorderTempApiImpl.getFilePlayTime(MessageRecord)` before hook 改返回值
+- 核心功能 hook 落点来自 QAuxv 同版本反编译验证：
   - 语音转发：菜单方法上遍历无参方法找「返回 PttElement」者并 `getFilePath()`
   - 戳一戳无限戳：`PaiYiPaiApiImpl.sendDoubleClickReq` before 清零 `this` 上所有 long 字段，原方法照常执行（保留显示）
-- 联系页 `ContactActivity` 为独立 Activity（LAUNCHER）。由于模块运行在 QQ 进程内，`startActivity` 会被 QQ 自身的 Activity 拦截/重定向，拉起 QQ 内部浏览器会令整个进程崩溃；因此联系页按钮**不再跳转**，改为点击即把对应链接（QQ 个人主页 / GitHub 仓库）复制到剪贴板并 Toast 提示，由用户自行粘贴到 QQ / 浏览器中打开。
 
 ## 🛠️ 从源码构建
 
